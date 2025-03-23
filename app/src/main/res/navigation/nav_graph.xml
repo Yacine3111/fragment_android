@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/compteurFragment">
+
+    <fragment
+        android:id="@+id/compteurFragment"
+        android:name="com.example.fragment.CompteurFragment"
+        android:label="@string/fragment_label_compteur"
+        tools:layout="@layout/fragment_compteur">
+        <action
+            android:id="@+id/action_compteurFragment_to_historiqueFragment"
+            app:destination="@id/historiqueFragment"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/historiqueFragment"
+        android:name="com.example.fragment.HistoriqueFragment"
+        android:label="@string/fragment_label_historique"
+        tools:layout="@layout/fragment_historique">
+
+    </fragment>
+
+</navigation>
