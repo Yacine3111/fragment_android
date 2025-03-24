@@ -40,7 +40,19 @@ public class MainActivity extends AppCompatActivity {
         CompteurViewModel compteurViewModel = new ViewModelProvider(this).get(CompteurViewModel.class);
 
         compteurViewModel.getCompteur().observe(this,compteur->{
-            Toast.makeText(this, compteur.toString(), Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, compteur.toString(), Toast.LENGTH_SHORT).show();
+
+        });
+
+        compteurViewModel.getHistorique().observe(this,operations->{
+            Operation operation;
+            if(!operations.isEmpty()){
+                operation = operations.get(operations.size() - 1);
+
+                new CompteurDialogFragment(operation).show(getSupportFragmentManager(),CompteurDialogFragment.TAG);
+            }
+
+
         });
     }
     @Override

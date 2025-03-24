@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 
-import org.w3c.dom.Text;
+
 
 public class CompteurFragment extends Fragment {
 
@@ -50,7 +50,9 @@ public class CompteurFragment extends Fragment {
         compteurViewModel.getCompteur().observe(requireActivity(),compteur->{
             compteurTV.setText(String.valueOf(compteur));
         });
+
     }
+
 
 }
 
