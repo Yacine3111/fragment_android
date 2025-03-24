@@ -49,6 +49,8 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata:2.8.7")
     implementation("androidx.lifecycle:lifecycle-common-java8:2.8.7")
 
+    implementation("androidx.preference:preference:1.2.1")
+
 }
 
 

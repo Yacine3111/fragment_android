@@ -11,4 +11,11 @@
     <string name="fragment_label_historique">Historique</string>
     <string name="dialog_operation">%s → %d</string>
     <string name="action_ok">Ok</string>
+    <string name="pref_dark_theme_summary">Activer le mode sombre pour l\'application</string>
+    <string name="pref_dark_theme_title">Thème sombre</string>
+    <string name="pref_interface_title">Interface</string>
+    <string name="menu_title_settings">Paramètres</string>
+    <string name="fragment_label_settings">Paramètres</string>
+    <string name="settings">Paramètre</string>
+
 </resources>
