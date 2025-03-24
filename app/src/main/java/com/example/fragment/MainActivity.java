@@ -1,12 +1,14 @@
 package com.example.fragment;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
@@ -34,6 +36,12 @@ public class MainActivity extends AppCompatActivity {
         AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
 
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
+        CompteurViewModel compteurViewModel = new ViewModelProvider(this).get(CompteurViewModel.class);
+
+        compteurViewModel.getCompteur().observe(this,compteur->{
+            Toast.makeText(this, compteur.toString(), Toast.LENGTH_SHORT).show();
+        });
     }
     @Override
     public boolean onSupportNavigateUp() {
