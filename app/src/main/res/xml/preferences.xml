@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.preference.PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- Catégorie Interface -->
     <PreferenceCategory
         app:iconSpaceReserved="false"
@@ -11,5 +12,50 @@
             app:key="dark_theme"
             app:summary="@string/pref_dark_theme_summary"
             app:title="@string/pref_dark_theme_title" />
+
+        <Preference
+            app:key="information"
+            app:title="Lien vers la documentation"
+            >
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://www.google.com"/>
+        </Preference>
+
+        <SwitchPreferenceCompat
+            app:defaultValue="false"
+            app:key="notification"
+            app:summary="activer les notifications"
+            app:title="Notification" />
+
+        <CheckBoxPreference
+            app:key="sound_notification"
+            app:title="Son de notification"
+            android:summary="joué un son lors d'un notification"
+            android:defaultValue="true"
+            android:dependency="notification"
+            />
+        <EditTextPreference
+            app:key="user_name"
+            app:title="nom d'utilisateur"
+            android:dialogTitle="entrez votre nom d'utilisateur"
+            android:negativeButtonText="NON"
+            android:positiveButtonText="OUI"
+            app:useSimpleSummaryProvider="true"
+            />
+        <SeekBarPreference
+            app:key="age"
+            app:title="donner votre age"
+            app:min="18"
+            android:max="99"
+            android:defaultValue="20"
+            app:showSeekBarValue="true"
+            />
+
+
+
     </PreferenceCategory>
+
+
+
 </androidx.preference.PreferenceScreen>
