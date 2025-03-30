@@ -52,6 +52,28 @@
             app:showSeekBarValue="true"
             />
 
+        <ListPreference
+            android:key="size_text"
+            android:entries="@array/text_size_entrie"
+            android:entryValues="@array/text_size_values"
+            android:title="taille du texte"
+            app:useSimpleSummaryProvider="true"
+            app:defaultValue="medium"
+            />
+        <MultiSelectListPreference
+            android:key="preference_multiple"
+            android:title="choisisez"
+            android:entries="@array/text_advenced_entrie"
+            android:entryValues="@array/text_advenced_values"
+            />
+
+        <Preference
+            app:key="advenced_option"
+            app:title="option avancées"
+            android:fragment="com.example.fragment.advancedSettingsFragment"
+           />
+
+
 
 
     </PreferenceCategory>

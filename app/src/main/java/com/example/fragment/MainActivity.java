@@ -55,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
                 new CompteurDialogFragment(operation).show(getSupportFragmentManager(),CompteurDialogFragment.TAG);
             }
         });
+
+
         PreferenceUtils.applyTheme(this);
     }
     @Override

@@ -24,6 +24,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
+
             actionBar.setTitle(R.string.fragment_label_settings);
             // Ajouter la flèche de retour dans la barre d'action
             actionBar.setDisplayHomeAsUpEnabled(true);
@@ -33,7 +34,6 @@ public class SettingsActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
             finish();
-            PreferenceUtils.applyTheme(this);
             return true;
         }
         return super.onOptionsItemSelected(item);

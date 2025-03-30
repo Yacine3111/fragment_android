@@ -10,7 +10,14 @@
         android:id="@+id/settings_fragment_host"
         android:name="com.example.fragment.SettingsFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        />
+
+    <!-- <androidx.fragment.app.FragmentContainerView
+         android:id="@+id/avancedSettings_fragment_host"
+         android:name="com.example.fragment.advancedSettingsFragment"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent" />  -->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
