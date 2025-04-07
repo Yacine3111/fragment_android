@@ -3,21 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     tools:context=".SettingsActivity">
 
-    <androidx.fragment.app.FragmentContainerView
+    <fragment
         android:id="@+id/settings_fragment_host"
-        android:name="com.example.fragment.SettingsFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        app:navGraph="@navigation/settings_nav_graph"
         />
-
-    <!-- <androidx.fragment.app.FragmentContainerView
-         android:id="@+id/avancedSettings_fragment_host"
-         android:name="com.example.fragment.advancedSettingsFragment"
-         android:layout_width="match_parent"
-         android:layout_height="match_parent" />  -->
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>

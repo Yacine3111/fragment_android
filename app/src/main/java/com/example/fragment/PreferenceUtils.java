@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.preference.PreferenceManager;
 
 import java.util.Map;
+import java.util.Set;
 
 public class PreferenceUtils {
     public static final String KEY_DARK_THEME = "dark_theme";
@@ -40,6 +41,8 @@ public class PreferenceUtils {
             Toast.makeText(context,"Boolean\n "+sharedPreferences.getBoolean(key,false),Toast.LENGTH_SHORT).show();
         }else if(all.get(key) instanceof Integer) {
             Toast.makeText(context,"Integer\n "+sharedPreferences.getInt(key,0),Toast.LENGTH_SHORT).show();
+        }else if(all.get(key) instanceof Set){
+            Toast.makeText(context,"Set<String>\n "+sharedPreferences.getStringSet(key,null),Toast.LENGTH_SHORT).show();
         }
     }
 }

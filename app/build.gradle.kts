@@ -45,6 +45,8 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment:2.8.8")
     implementation("androidx.navigation:navigation-ui:2.8.8")
 
+    implementation("androidx.navigation:navigation-compose:2.8.8")
+
     implementation("androidx.lifecycle:lifecycle-viewmodel:2.8.7")
     implementation("androidx.lifecycle:lifecycle-livedata:2.8.7")
     implementation("androidx.lifecycle:lifecycle-common-java8:2.8.7")
